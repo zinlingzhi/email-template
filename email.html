@@ -1,0 +1,710 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <title>Thank you for your order</title>
+  <style>
+    /* -------------------------------------
+          GLOBAL RESETS
+      ------------------------------------- */
+
+    /*All the styling goes here*/
+
+    img {
+      border: none;
+      -ms-interpolation-mode: bicubic;
+      max-width: 100%;
+    }
+
+    body {
+      background-color: #f6f6f6;
+      font-family: sans-serif;
+      -webkit-font-smoothing: antialiased;
+      font-size: 14px;
+      line-height: 1.4;
+      margin: 0;
+      padding: 0;
+      -ms-text-size-adjust: 100%;
+      -webkit-text-size-adjust: 100%;
+    }
+
+    table {
+      border-collapse: separate;
+      mso-table-lspace: 0pt;
+      mso-table-rspace: 0pt;
+      width: 100%;
+    }
+
+    table td {
+      font-family: sans-serif;
+      font-size: 14px;
+      vertical-align: top;
+    }
+
+    /* -------------------------------------
+          BODY & CONTAINER
+      ------------------------------------- */
+
+    .body {
+      background-color: #f6f6f6;
+      width: 100%;
+    }
+
+    /* Set a max-width, and make it display as block so it will automatically stretch to that width, but will also shrink down on a phone or something */
+    .container {
+      display: block;
+      margin: 0 auto !important;
+      /* makes it centered */
+      max-width: 700px;
+      padding: 10px;
+      width: 700px;
+    }
+
+    /* This should also be a block element, so that it will fill 100% of the .container */
+    .content {
+      box-sizing: border-box;
+      display: block;
+      margin: 0 auto;
+      max-width: 700px;
+      padding: 10px;
+    }
+
+    /* -------------------------------------
+          HEADER, FOOTER, MAIN
+      ------------------------------------- */
+    .main {
+      border-radius: 3px;
+      width: 100%;
+    }
+
+    .wrapper {
+      box-sizing: border-box;
+    }
+
+    .content-block {
+      padding-bottom: 10px;
+      padding-top: 10px;
+    }
+
+    .footer {
+      clear: both;
+      margin-top: 10px;
+      text-align: center;
+      width: 100%;
+    }
+
+    .footer td,
+    .footer p,
+    .footer span,
+    .footer a {
+      color: #999999;
+      font-size: 12px;
+      text-align: center;
+    }
+
+    /* -------------------------------------
+          TYPOGRAPHY
+      ------------------------------------- */
+    h1,
+    h2,
+    h3,
+    h4 {
+      color: #000000;
+      font-family: sans-serif;
+      font-weight: 400;
+      line-height: 1.4;
+      margin: 0;
+      margin-bottom: 30px;
+    }
+
+    h1 {
+      font-size: 35px;
+      font-weight: 300;
+      text-align: center;
+      text-transform: capitalize;
+    }
+
+    p,
+    ul,
+    ol {
+      font-family: sans-serif;
+      font-size: 14px;
+      font-weight: normal;
+      margin: 0 0 5px 0;
+    }
+
+    p li,
+    ul li,
+    ol li {
+      list-style-position: inside;
+      margin-left: 5px;
+    }
+
+    a {
+      color: #3498db;
+      text-decoration: underline;
+    }
+
+    /* -------------------------------------
+          BUTTONS
+      ------------------------------------- */
+    .btn {
+      box-sizing: border-box;
+      width: fit-content;
+    }
+
+    .btn>tbody>tr>td {
+      padding-bottom: 15px;
+    }
+
+    .btn table {
+      width: auto;
+    }
+
+    .btn table td {
+      background-color: #ffffff;
+      border-radius: 5px;
+      text-align: center;
+    }
+
+    .btn a {
+      background-color: #ffffff;
+      border: solid 1px #3498db;
+      border-radius: 5px;
+      box-sizing: border-box;
+      color: #3498db;
+      cursor: pointer;
+      display: inline-block;
+      font-size: 14px;
+      font-weight: bold;
+      margin: 0;
+      padding: 12px 25px;
+      text-decoration: none;
+      text-transform: capitalize;
+    }
+
+    .btn-primary table td {
+      background-color: #3498db;
+    }
+
+    .btn-primary a {
+      background-color: #3e6ae1;
+      border-color: #3e6ae1;
+      color: #ffffff;
+      border-radius: 20px;
+      padding-top: 12px;
+      padding-bottom: 12px;
+      min-width: 200px;
+      text-align: center;
+    }
+
+    /* -------------------------------------
+          OTHER STYLES THAT MIGHT BE USEFUL
+      ------------------------------------- */
+    .last {
+      margin-bottom: 0;
+    }
+
+    .first {
+      margin-top: 0;
+    }
+
+    .align-center {
+      text-align: center;
+    }
+
+    .align-right {
+      text-align: right;
+    }
+
+    .align-left {
+      text-align: left;
+    }
+
+    .clear {
+      clear: both;
+    }
+
+    .mt0 {
+      margin-top: 0;
+    }
+
+    .mb0 {
+      margin-bottom: 0;
+    }
+
+    .preheader {
+      color: transparent;
+      display: none;
+      height: 0;
+      max-height: 0;
+      max-width: 0;
+      opacity: 0;
+      overflow: hidden;
+      mso-hide: all;
+      visibility: hidden;
+      width: 0;
+    }
+
+    .powered-by a {
+      text-decoration: none;
+    }
+
+    hr {
+      border: 0;
+      border-bottom: 1px solid #f6f6f6;
+      margin: 20px 0;
+    }
+
+    .main-content {
+      background: white;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      color: black;
+    }
+
+    .logo-content {
+      padding: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .logo-content svg {
+      width: 200px;
+    }
+
+    .order-confirmation-content {
+      background: #f4f4f4;
+      padding: 30px;
+    }
+
+    .order-confirmation-content .order-confirmation--title {
+      text-transform: uppercase;
+      font-size: 20px;
+      font-weight: 600;
+      text-align: center;
+      margin-bottom: 15px;
+    }
+
+    .order-confirmation-content .order-confirmation--description {
+      font-size: 15px;
+      text-align: center;
+      max-width: 500px;
+      margin: 0 auto;
+    }
+
+    .order-summary-content {
+      padding: 30px;
+    }
+
+    .order-summary-content .order-summary--title {
+      text-transform: uppercase;
+      font-size: 20px;
+      font-weight: 600;
+      text-align: center;
+    }
+
+    .order-summary-content .order-summary--date {
+      font-size: 15px;
+      text-align: center;
+      margin: 0 auto;
+    }
+
+    .order-summary--main {
+      
+    }
+
+    .order-summary--main .order-summary--img {
+      width: 100%;
+    }
+
+    .order-summary--main .order-summary--img {
+      width: 100%;
+      height: auto;
+    }
+
+    .order-summary--main .order-summary--description {
+      max-width: 400px;
+      margin: 0 auto;
+      border: 1px solid #ddd;
+      padding: 10px 20px;
+      border-radius: 10px;
+    }
+
+    .order-summary--main table td {
+      font-size: 14px;
+      height: 30px;
+      vertical-align: middle;
+    }
+
+    .order-summary--main table td:nth-child(1) {
+      text-align: left;
+    }
+    .order-summary--main table td:nth-child(2),
+    .order-summary--main table td:nth-child(3) {
+      text-align: right;
+    }
+
+    .order-summary--main table b {
+      font-weight: 600;
+      font-size: 15px;
+      margin: 0;
+    }
+
+    .order-summary--main table img {
+      width: 24px;
+      height: 24px;
+    }
+
+    .order-total-content {
+      padding: 30px;
+    }
+
+    .order-total-content .order-total--title {
+      text-transform: uppercase;
+      font-size: 20px;
+      font-weight: 600;
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .order-total-content .order-total--main {
+      max-width: 550px;
+      margin: 0 auto;
+    }
+
+    .order-total-content .order-total--main table {
+      border-spacing: 0;
+    }
+
+    .order-total-content .order-total--main table td {
+      font-size: 14px;
+      line-height: 120%;
+      padding: 8px 0;
+    }
+
+    .order-total-content .order-total--main table td:nth-child(1) {
+      text-align: left;
+    }
+    .order-total-content .order-total--main table td:nth-child(2) {
+      text-align: right;
+    }
+
+    .order-total-content .order-total--main table tr.order-total--tr-border td {
+      padding: 0;
+    }
+
+    .order-total-content .order-total--main table tr.order-total--tr-border hr {
+      border-bottom: 1px solid #000;
+      margin: 8px 0;
+    }
+
+    .order-total-content .order-total--main table b {
+      font-size: 15px;
+    }
+
+    .order-bill-content {
+      padding: 30px;
+    }
+
+    .order-bill-content .order-bill--title {
+      text-transform: uppercase;
+      font-size: 20px;
+      font-weight: 600;
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .order-bill--main {
+      max-width: 550px;
+      margin: 0 auto;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-around;
+    }
+
+    .order-bill--main .order-bill--item-content {
+      padding: 10px 20px;
+      width: 40%;
+    }
+
+    .order-bill--main .order-bill--item-content b {
+      font-size: 16px;
+      display: block;
+      padding-bottom: 10px;
+    }
+
+    .order-button-content {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 10px 0 30px;
+    }
+
+    /* -------------------------------------
+          RESPONSIVE AND MOBILE FRIENDLY STYLES
+      ------------------------------------- */
+    @media only screen and (max-width: 740px) {
+      table.body h1 {
+        font-size: 28px !important;
+        margin-bottom: 10px !important;
+      }
+
+      table.body p,
+      table.body ul,
+      table.body ol,
+      table.body td,
+      table.body span,
+      table.body a {
+        font-size: 16px !important;
+      }
+
+      table.body .wrapper,
+      table.body .article {
+        padding: 10px !important;
+      }
+
+      table.body .content {
+        padding: 0 !important;
+      }
+
+      table.body .container {
+        padding: 0 !important;
+        width: 100% !important;
+      }
+
+      table.body .main {
+        border-left-width: 0 !important;
+        border-radius: 0 !important;
+        border-right-width: 0 !important;
+      }
+
+      table.body .btn table {
+        width: 100% !important;
+      }
+
+      table.body .btn a {
+        width: 100% !important;
+      }
+
+      table.body .img-responsive {
+        height: auto !important;
+        max-width: 100% !important;
+        width: auto !important;
+      }
+    }
+
+    /* -------------------------------------
+          PRESERVE THESE STYLES IN THE HEAD
+      ------------------------------------- */
+    @media all {
+      .ExternalClass {
+        width: 100%;
+      }
+
+      .ExternalClass,
+      .ExternalClass p,
+      .ExternalClass span,
+      .ExternalClass font,
+      .ExternalClass td,
+      .ExternalClass div {
+        line-height: 100%;
+      }
+
+      .apple-link a {
+        color: inherit !important;
+        font-family: inherit !important;
+        font-size: inherit !important;
+        font-weight: inherit !important;
+        line-height: inherit !important;
+        text-decoration: none !important;
+      }
+
+      #MessageViewBody a {
+        color: inherit;
+        text-decoration: none;
+        font-size: inherit;
+        font-family: inherit;
+        font-weight: inherit;
+        line-height: inherit;
+      }
+
+      .btn-primary table td:hover {
+        background-color: #34495e !important;
+      }
+
+      .btn-primary a:hover {
+        background-color: #34495e !important;
+        border-color: #34495e !important;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <span class="preheader">Thank you for your order.</span>
+  <table role="presentation" border="0" cellpadding="0" cellspacing="0" class="body">
+    <tr>
+      <td>&nbsp;</td>
+      <td class="container">
+        <div class="content">
+
+          <!-- START CENTERED WHITE CONTAINER -->
+          <table role="presentation" class="main">
+
+            <!-- START MAIN CONTENT AREA -->
+            <tr>
+              <td class="wrapper">
+                <table role="presentation" border="0" cellpadding="0" cellspacing="0">
+                  <tr>
+                    <td class="main-content">
+                      <div class="logo-content">
+                        <svg viewBox="0 0 342 35" xmlns="http://www.w3.org/2000/svg">
+                          <path
+                            d="M0 .1a9.7 9.7 0 007 7h11l.5.1v27.6h6.8V7.3L26 7h11a9.8 9.8 0 007-7H0zm238.6 0h-6.8v34.8H263a9.7 9.7 0 006-6.8h-30.3V0zm-52.3 6.8c3.6-1 6.6-3.8 7.4-6.9l-38.1.1v20.6h31.1v7.2h-24.4a13.6 13.6 0 00-8.7 7h39.9v-21h-31.2v-7h24zm116.2 28h6.7v-14h24.6v14h6.7v-21h-38zM85.3 7h26a9.6 9.6 0 007.1-7H78.3a9.6 9.6 0 007 7zm0 13.8h26a9.6 9.6 0 007.1-7H78.3a9.6 9.6 0 007 7zm0 14.1h26a9.6 9.6 0 007.1-7H78.3a9.6 9.6 0 007 7zM308.5 7h26a9.6 9.6 0 007-7h-40a9.6 9.6 0 007 7z"
+                            fill="currentColor"></path>
+                        </svg>
+                      </div>
+                      <div class="order-confirmation-content">
+                        <p class="order-confirmation--title">Order Confirmation</p>
+                        <p class="order-confirmation--description">JinLing Zhi, thank you for your order!<br/><br/>We've received your order and will contact you as soon as your product is shipped. You can find your purchase information below.</p>
+                      </div>
+                      <div class="order-summary-content">
+                        <p class="order-summary--title">Order Summary</p>
+                        <p class="order-summary--date">March 23, 2022</p>
+                        <div class="order-summary--main">
+                          <div class="order-summary--img">
+                            <img src="https://tesla-com.energy/images/cars/mobile/m3-performance-white-wheel3-0.jpg" />
+                          </div>
+                          <div class="order-summary--description">
+                            <table>
+                              <tr>
+                                <td><b>Model</b></td>
+                                <td>Model 3 Long Range</td>
+                                <td></td>
+                              </tr>
+                              <tr>
+                                <td><b>Paint</b></td>
+                                <td>Pearl White Multi-Coat</td>
+                                <td><img src="https://tesla-com.energy/images/icons/Paint-1.png" /></td>
+                              </tr>
+                              <tr>
+                                <td><b>Wheels</b></td>
+                                <td>18" Aero Wheels</td>
+                                <td><img src="https://tesla-com.energy/images/icons/wheel3.png" /></td>
+                              </tr>
+                              <tr>
+                                <td><b>Interior</b></td>
+                                <td>Black and White</td>
+                                <td><img src="https://tesla-com.energy/images/icons/interior-white.png" /></td>
+                              </tr>
+                            </table>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="order-total-content">
+                        <p class="order-total--title">Order Total</p>
+                        <div class="order-total--main">
+                          <table>
+                            <tr>
+                              <td>Model 3 Long Range Dual Motor All-Wheel Drive</td>
+                              <td>$54,490</td>
+                            </tr>
+                            <tr>
+                              <td>Pearl White Paint</td>
+                              <td>Included</td>
+                            </tr>
+                            <tr>
+                              <td>19" Sport Wheels</td>
+                              <td>$1,500</td>
+                            </tr>
+                            <tr>
+                              <td>All Black Premium Interior</td>
+                              <td>Included</td>
+                            </tr>
+                            <tr>
+                              <td>Autopilot</td>
+                              <td>Included</td>
+                            </tr>
+                            <tr>
+                              <td>30-Day Premium Connectivity Trial</td>
+                              <td>Included</td>
+                            </tr>
+                            <tr>
+                              <td><b>Vehicle Price</b></td>
+                              <td><b>$74,990</b></td>
+                            </tr>
+                            <tr class="order-total--tr-border">
+                              <td colspan="2"><hr /></td>
+                            </tr>
+                            <tr>
+                              <td>California Clean Fuel Reward</td>
+                              <td>-$750</td>
+                            </tr>
+                            <tr>
+                              <td>Est.6-year gas savings</td>
+                              <td>-$6,400</td>
+                            </tr>
+                            <tr class="order-total--tr-border">
+                              <td colspan="2"><hr /></td>
+                            </tr>
+                            <tr>
+                              <td>Price after Est. Savings</td>
+                              <td>$48,840</td>
+                            </tr>
+                          </table>
+                        </div>
+                      </div>
+                      <div class="order-bill-content">
+                        <p class="order-bill--title">Billing and Shipping</p>
+                        <div class="order-bill--main">
+                          <div class="order-bill--item-content">
+                            <b>Billing</b>
+                            <p>Tesla Company</p>
+                            <p>45500 Fremont Boulevard</p>
+                            <p>Fremont, CA</p>
+                            <p>94538</p>
+                            <p>United States</p>
+                          </div>
+                          <div class="order-bill--item-content">
+                            <b>Shipping</b>
+                            <p>JinLing Zhi</p>
+                            <p>Shenyang</p>
+                            <p>Liaoyang, Liaoning</p>
+                            <p>10422</p>
+                            <p>China</p>
+                          </div>
+                          <div class="order-bill--item-content">
+                            <b>Payment method</b>
+                            <p>Visa *** *** ***</p>
+                          </div>
+                          <div class="order-bill--item-content">
+                            <b>Shipping method</b>
+                            <p>Standard shipping</p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="order-button-content">
+                        <div class="btn btn-primary"> <a href="http://htmlemail.io" target="_blank">View Order</a> </td>
+                      </div>
+                    </td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+
+            <!-- END MAIN CONTENT AREA -->
+          </table>
+          <!-- END CENTERED WHITE CONTAINER -->
+        </div>
+      </td>
+      <td>&nbsp;</td>
+    </tr>
+  </table>
+</body>
+
+</html>
